@@ -3,7 +3,7 @@
 # @Author: kurohai
 # @Date:   2015-11-18 21:47:31
 # @Last Modified by:   evan
-# @Last Modified time: 2015-12-16 12:14:11
+# @Last Modified time: 2016-02-02 08:24:48
 
 
 from sqlalchemy.orm import Session, scoped_session, sessionmaker
@@ -20,8 +20,8 @@ from flask.ext.admin import Admin
 from flask.ext.admin.contrib.sqla import ModelView
 
 
-appname = 'Flask Template'
-appnamed = 'flasktemplate'
+appname = 'Kurohai'
+appnamed = 'kuroweb'
 pwd = os.path.abspath(os.curdir)
 
 dbpath = '{dir}/{app}.db'.format(dir=pwd, app=appnamed)

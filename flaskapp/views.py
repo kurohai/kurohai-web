@@ -12,7 +12,7 @@ blueprint = Blueprint(flasktemplate.appnamed, __name__)
 
 @blueprint.route('/about-me/')
 def about():
-    return render_template('public/index.html')
+    return render_template('public/about.html')
 
 @blueprint.route('/')
 def home():

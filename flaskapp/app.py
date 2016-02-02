@@ -1,18 +1,23 @@
 #!/bin/env python
 
 from flask import Flask
-from flask.ext.pagedown import PageDown
-from flaskext.markdown import Markdown
+# from flask.ext.pagedown import PageDown
+# from flaskext.markdown import Markdown
+from settings import config
+
+appname = config.appname
+appnamed = config.appnamed
+pwd = config.pwd
 
 
 flasktemplate = Flask(__name__)
-flasktemplate.appname = 'Flask Template'
-flasktemplate.appnamed = 'flasktemplate'
-flasktemplate.config.SECRET_KEY = 'enydM2ANhdcoKwdVa0jWvEsbPFuQpMjf'
-flasktemplate.config.SESSION_PROTECTION = 'strong'
+flasktemplate.appname = config.appname
+flasktemplate.appnamed = config.appnamed
+flasktemplate.config.SECRET_KEY = config.SECRET_KEY
+flasktemplate.config.SESSION_PROTECTION = config.SESSION_PROTECTION
 
-pagedown = PageDown(flasktemplate)
-Markdown(flasktemplate)
+# pagedown = PageDown(flasktemplate)
+# Markdown(flasktemplate)
 
 
 @flasktemplate.template_global()

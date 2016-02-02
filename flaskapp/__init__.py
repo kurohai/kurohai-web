@@ -3,7 +3,7 @@
 # @Author: kurohai
 # @Date:   2015-11-18 21:47:31
 # @Last Modified by:   evan
-# @Last Modified time: 2016-02-02 08:24:48
+# @Last Modified time: 2016-02-02 08:30:44
 
 
 from sqlalchemy.orm import Session, scoped_session, sessionmaker
@@ -18,11 +18,11 @@ import flask.ext.restless
 from flask.ext.socketio import SocketIO
 from flask.ext.admin import Admin
 from flask.ext.admin.contrib.sqla import ModelView
+from settings import config
 
-
-appname = 'Kurohai'
-appnamed = 'kuroweb'
-pwd = os.path.abspath(os.curdir)
+appname = config.appname
+appnamed = config.appnamed
+pwd = config.pwd
 
 dbpath = '{dir}/{app}.db'.format(dir=pwd, app=appnamed)
 dburi = 'sqlite:///{db}'.format(db=dbpath)

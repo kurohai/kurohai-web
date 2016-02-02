@@ -1,5 +1,15 @@
+# stuff for virtualenv
+bin/
+include/
+lib/
+lib64/
+
+# normal excludes
 *.db
 *.py[cod]
 *.log
 log/
 *.sublime-*
+
+# nginx and uwsgi socket
+*.sock

@@ -1,4 +1,5 @@
 
+import os
 from dicto import dicto
 
 class config(dicto):

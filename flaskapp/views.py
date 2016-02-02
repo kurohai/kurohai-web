@@ -11,10 +11,10 @@ from flaskapp import *
 blueprint = Blueprint(flasktemplate.appnamed, __name__)
 
 @blueprint.route('/about-me/')
-def home():
+def about():
     return render_template('public/index.html')
 
-# @blueprint.route('/')
-# def home():
-#     return render_template('public/index.html')
+@blueprint.route('/')
+def home():
+    return render_template('public/index.html')
 

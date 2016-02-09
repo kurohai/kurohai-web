@@ -11,7 +11,7 @@ from flaskapp import *
 blueprint = Blueprint(flasktemplate.appnamed, __name__)
 
 @blueprint.route('/poetry/')
-def about():
+def poetry():
     return render_template('public/about.html')
 
 @blueprint.route('/')

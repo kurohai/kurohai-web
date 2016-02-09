@@ -20,4 +20,4 @@ def home():
 
 @blueprint.route('/voice.xml', methods=['GET', 'POST'])
 def voice():
-    return send_file('voice.xml')
+    return send_file('templates/voice.xml')

@@ -18,7 +18,6 @@ def about():
 def home():
     return render_template('public/index.html')
 
-@blueprint.route('/voice.xml')
+@blueprint.route('/voice.xml', methods=['GET', 'POST'])
 def voice():
-    return render_template('voice.xml')
-
+    return send_file('voice.xml')

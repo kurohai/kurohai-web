@@ -10,11 +10,15 @@ from flaskapp import *
 
 blueprint = Blueprint(flasktemplate.appnamed, __name__)
 
-@blueprint.route('/about-me/')
+@blueprint.route('/poetry/')
 def about():
     return render_template('public/about.html')
 
 @blueprint.route('/')
 def home():
     return render_template('public/index.html')
+
+@blueprint.route('/voice.xml')
+def home():
+    return render_template('voice.xml')
 

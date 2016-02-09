@@ -19,6 +19,6 @@ def home():
     return render_template('public/index.html')
 
 @blueprint.route('/voice.xml')
-def home():
+def voice():
     return render_template('voice.xml')
 

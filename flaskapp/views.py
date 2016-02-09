@@ -1,4 +1,4 @@
-from flask import Blueprint
+from flask import Blueprint, redirect
 from flask import render_template, request, url_for, send_file
 from dicto import dicto
 from sqlalchemy import and_
@@ -21,3 +21,7 @@ def home():
 @blueprint.route('/voice.xml', methods=['GET', 'POST'])
 def voice():
     return send_file('templates/voice.xml')
+
+@blueprint.route('/colord/')
+def colord():
+    return redirect('http://colord.kurohai.com/', code=302)

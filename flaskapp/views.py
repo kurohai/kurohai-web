@@ -28,4 +28,4 @@ def colord():
 
 @blueprint.route('/resume/python-dev/')
 def python_dev():
-    return render_template('public/python-dev.html')
+    return render_template('public/resume/python-dev.html')

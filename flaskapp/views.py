@@ -25,3 +25,7 @@ def voice():
 @blueprint.route('/colord/')
 def colord():
     return redirect('http://colord.kurohai.com/', code=302)
+
+@blueprint.route('/resume/python-dev/')
+def python_dev():
+    return render_template('public/python-dev.html')

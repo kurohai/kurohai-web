@@ -5,12 +5,13 @@ import time
 
 def initdb():
     Base.metadata.create_all(bind=engine)
-    log.info('tables created')
+    log.warn('tables created')
     mkusr()
     log.info('user created')
 
 
 def deldb():
+    log.warn('tables deleted')
     Base.metadata.drop_all(bind=engine)
 
 

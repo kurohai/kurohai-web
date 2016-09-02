@@ -44,7 +44,7 @@ def wiki(path):
     fullpath = os.path.abspath(os.curdir) + '/flaskapp/templates/wiki/'
     if os.path.isdir(os.path.join(fullpath, path)):
         path = path + 'index.html'
-        print 'last one:', fullpath
+        log.info('full path: {0}{1}'.format(fullpath, path))
 
     return send_from_directory(fullpath, path)
 

@@ -19,6 +19,8 @@ from flask.ext.socketio import SocketIO
 from flask.ext.admin import Admin
 from flask.ext.admin.contrib.sqla import ModelView
 from settings import config
+import logging
+
 
 appname = config.appname
 appnamed = config.appnamed
@@ -57,7 +59,8 @@ Base.query = db_session.query_property()
 
 
 from models import *
-from app import flasktemplate
+from log_models import Log
+from app import flasktemplate, log
 from forms import *
 from views import blueprint
 from log_view import log_blueprint

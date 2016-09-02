@@ -4,8 +4,12 @@
 {% block title %}{{ appname() }}{% endblock title %}
 
 {% block main %}
-<div class="row">
-    <div class="span12">
+    <div class="row">
+        <div class="span12">
+            <h1>Home</h1>
+        </div>
+        {% if data %}
+            <div>{{ data|safe }}</div>
+        {% endif %}
     </div>
-</div>
 {% endblock main %}

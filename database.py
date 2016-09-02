@@ -1,5 +1,5 @@
 from sqlalchemy.orm import scoped_session, sessionmaker
-from flaskapp import app, Base, User, session, engine, log
+from flaskapp import app, Base, User, session, engine, log, Log
 import time
 
 

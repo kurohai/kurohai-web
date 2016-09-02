@@ -17,6 +17,7 @@ def poetry():
 
 @blueprint.route('/')
 def home():
+    log.error('hello, error.')
     return render_template('public/index.html')
 
 

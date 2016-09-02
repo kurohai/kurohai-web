@@ -32,6 +32,7 @@ def get_log():
     """review app logs"""
 
     results = session.query(Log).all()
+    print 'log count:', len(results)
     logs = [repr(l) for l in results]
     data = '<br>\n'.join(logs)
 

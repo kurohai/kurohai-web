@@ -45,6 +45,7 @@ def wiki(path):
     if os.path.isdir(os.path.join(fullpath, path)):
         path = path + 'index.html'
         log.info('full path: {0}{1}'.format(fullpath, path))
+        print 'full path: {0}{1}'.format(fullpath, path)
 
     return send_from_directory(fullpath, path)
 

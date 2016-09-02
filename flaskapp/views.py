@@ -42,6 +42,7 @@ def wiki(path):
     log.info(path)
     log.info(current_user.username)
     fullpath = os.path.abspath(os.curdir) + '/flaskapp/templates/wiki/'
+    print 'full path: {0}{1}'.format(fullpath, path)
     if os.path.isdir(os.path.join(fullpath, path)):
         path = path + 'index.html'
         log.info('full path: {0}{1}'.format(fullpath, path))

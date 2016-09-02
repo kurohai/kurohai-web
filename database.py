@@ -6,16 +6,20 @@ import time
 def initdb():
     Base.metadata.create_all(bind=engine)
     log.warn('tables created')
+    print 'tables created'
     mkusr()
     log.info('user created')
+    print 'user created'
 
 
 def deldb():
     log.warn('tables deleted')
+    print 'tables deleted'
     Base.metadata.drop_all(bind=engine)
 
 
 def mkusr():
+    print 'adding user'
     u = User()
     u.id = 1
     u.email = 'kurohai@gmail.com'

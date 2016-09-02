@@ -62,9 +62,9 @@ from models import *
 from log_models import Log
 from app import flasktemplate, log
 from forms import *
+from login import login_manager
 from views import blueprint
 from log_view import log_blueprint
-
 
 flasktemplate.register_blueprint(blueprint)
 flasktemplate.register_blueprint(log_blueprint)

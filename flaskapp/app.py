@@ -15,14 +15,15 @@ pwd = config.pwd
 flasktemplate = Flask(__name__)
 flasktemplate.appname = config.appname
 flasktemplate.appnamed = config.appnamed
-flasktemplate.config.SECRET_KEY = config.SECRET_KEY
-flasktemplate.config.SESSION_PROTECTION = config.SESSION_PROTECTION
+flasktemplate.secret_key = config.SECRET_KEY
+flasktemplate.session_protection = config.SESSION_PROTECTION
 
 
 handler = SQLAlchemyHandler()
 handler.setLevel(logging.DEBUG)
 flasktemplate.logger.addHandler(handler)
 log = flasktemplate.logger
+
 
 # pagedown = PageDown(flasktemplate)
 # Markdown(flasktemplate)

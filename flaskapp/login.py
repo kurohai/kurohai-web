@@ -4,7 +4,7 @@ from flask.ext.login import login_user
 from flask.ext.login import login_required
 from flask.ext.login import logout_user
 from flask.ext.login import AnonymousUserMixin
-from flaskapp import flasktemplate
+from flaskapp import flasktemplate, appnamed, session, User
 
 class Anonymous(AnonymousUserMixin):
 

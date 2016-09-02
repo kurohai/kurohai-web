@@ -22,7 +22,8 @@ def db():
 
 @manager.command
 def quick():
-    d = wsgiserver.WSGIPathInfoDispatcher({'/kurohai': flasktemplate, '/colord': colord_flasktemplate})
+    # d = wsgiserver.WSGIPathInfoDispatcher({'/kurohai': flasktemplate, '/colord': colord_flasktemplate})
+    d = wsgiserver.WSGIPathInfoDispatcher({'/kurohai': flasktemplate})
     server = wsgiserver.CherryPyWSGIServer(('0.0.0.0', 80), d, server_name=flasktemplate.appname, )
     try:
         server.start()

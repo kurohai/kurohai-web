@@ -14,3 +14,5 @@ log/
 
 # nginx and uwsgi socket
 *.sock
+
+wiki/

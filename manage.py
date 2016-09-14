@@ -14,10 +14,13 @@ manager = Manager(flasktemplate)
 
 @manager.command
 def db():
-    Base.metadata.create_all(bind=engine)
-    colord_base.metadata.drop_all(bind=engine)
-    colord_base.metadata.create_all(bind=engine)
-    data()
+    import database
+    database.deldb
+    database.initdb
+    # Base.metadata.create_all(bind=engine)
+    # colord_base.metadata.drop_all(bind=engine)
+    # colord_base.metadata.create_all(bind=engine)
+    # data()
 
 
 @manager.command

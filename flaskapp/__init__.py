@@ -26,9 +26,13 @@ appname = config.appname
 appnamed = config.appnamed
 pwd = config.pwd
 
-dbpath = '{dir}/{app}.db'.format(dir=pwd, app=appnamed)
-dburi = 'sqlite:///{db}'.format(db=dbpath)
-
+dbpath = config.dbpath
+dburi = config.dburi
+# if os.path.exists(dbpath):
+#     print 'db path yes'
+# print 'pwd:', pwd
+# print 'dburi:', dburi
+# print 'dbpath:', dbpath
 
 @as_declarative()
 class BaseBase(dicto):

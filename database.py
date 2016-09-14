@@ -1,6 +1,7 @@
 from sqlalchemy.orm import scoped_session, sessionmaker
 from flaskapp import app, Base, User, session, engine, log, Log
 import time
+from flaskapp.secret import Admin
 
 
 def initdb():
@@ -13,20 +14,28 @@ def initdb():
 
 
 def deldb():
-    log.warn('tables deleted')
+    try:
+        log.warn('tables deleted')
+    except:
+        pass
     print 'tables deleted'
-    Base.metadata.drop_all(bind=engine)
+    try:
+        Base.metadata.drop_all(bind=engine)
+    except:
+        pass
 
 
 def mkusr():
     print 'adding user'
+
     u = User()
-    u.id = 1
-    u.email = 'kurohai@gmail.com'
-    u.username = 'kurohai'
-    u.name = 'Kurohai'
-    u.password = 'lol'
-    u.admin = True
+    a = Admin()
+
+    u.username = a.username
+    u.id = a.id
+    u.email = a.email
+    u.password = a.password
+    u.admin = a.admin
 
     session.add(u)
     session.commit()

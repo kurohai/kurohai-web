@@ -10,4 +10,4 @@ class config(dicto):
     SESSION_PROTECTION = 'strong'
     dbpath = '{dir}/{app}.db'.format(dir=pwd, app=appnamed)
     dburi = 'sqlite:///{db}'.format(db=dbpath)
-
+    secret_dir = '{0}/secret'.format(pwd)

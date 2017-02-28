@@ -11,6 +11,8 @@ lib64
 *.log
 log/
 *.sublime-*
+secret
+secret/
 
 # nginx and uwsgi socket
 *.sock
